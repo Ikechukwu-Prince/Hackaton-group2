@@ -1133,7 +1133,7 @@ th {
 
 .mainGrid .Consumer_DashBoard .consumer_sidePanelNav select {
  
-  background-color: transparent;
+  background-color: transparent !important;
   width: auto;
   outline: 0;
   border: 0 !important;
@@ -1142,7 +1142,11 @@ th {
   color: white;
   cursor: pointer;
   display: block;
-  /* color: black; */
+  color: rgb(255, 255, 255);
+}
+.consumer_sidePanelNav option {
+  background-color: rgb(25, 45, 75);
+  width: auto;
 }
 
 .mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt{
