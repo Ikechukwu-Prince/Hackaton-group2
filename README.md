@@ -73,14 +73,14 @@ Register for a profile to track your authentication history.
 # Contributing
 We welcome contributions from the community to improve this platform. To contribute:
 1. Prince
-2. destiny
-3. bright
+2. Destiny
+3. Bright
 4. Michelle
-5. hakimat
-6. habib
-7. farida
-8. chike
-9. petra
+5. Hakimat
+6. Habib
+7. Farida
+8. Chike
+9. Petra
 
 
  # Future Enhancements
