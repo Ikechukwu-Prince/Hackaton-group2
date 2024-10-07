@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumer</title>
+    <link rel="stylesheet" href="./consumer.css" />
+    <link rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="shortcut icon" href="/Assets/Images/FDIS logo.ico" type="image/x-icon">
+    
+  </head>
+
+  <body>
+
+
+  
+
+
+
+    <!-- Navigation bar -->
+    <div class="nav">
+      <img src="/Assets/Images/FDIS logo.png" alt="logo" style="width: 6%; max-width: 60px; min-width: 50px;">
+
+    <div class="navLinks">
+      <a href="./index.html" class="links">Home</a>
+      <a href="./Manufactures.html" class="links">manufacturer</a>
+
+      <a href="./index.html#About" class="links">About Us</a>
+
+     
+
+      <a href="./index.html#Blogs" class="links">BLOGS</a>
+      <a href="https://edition.cnn.com/search?q=medications&from=0&size=10&page=1&sort=newest&types=all&section=" class="links">NEWS</a>
+    
+    </div>
+    <div class="mobileNavSvgPkg">
+      
+      <svg
+      onclick="mobileDashboardBtn()"
+      class=""
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+     
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+      />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: block;" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16" onclick="setting()">
+      <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+      <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+    </svg>
+      <svg
+        id="menu"
+        onclick="linkMenuBtn()"
+        xmlns="http://www.w3.org/2000/svg"
+        width=" 6"
+        height="6"
+        fill="currentColor"
+        class="bi bi-filter-left menu"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+        />
+      </svg>
+     
+    </div>
+    </div>
+    <div class="navMobile" id="linkMenu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./Manufactures.html">Manufacturer</a></li>
+        <li><a href="./index.html#About">About us</a></li>
+        <li><a href="./index.html#Blogs">Blogs</a></li>
+        
+        <li><a href="https://edition.cnn.com/search?q=medications&from=0&size=10&page=1&sort=newest&types=all&section=">news</a></li>
+        
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="settingSection" id="settingSection">
+      <div class="settings-container">
+        <!-- Drug Alerts Settings -->
+        <button class="collapsible">Drug Alerts 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content preshown">
+            <div class="setting-item">
+                <label for="drug-alerts">Receive Drug Alerts:</label>
+                <input type="checkbox" id="drug-alerts" checked>
+            </div>
+            <div class="setting-item">
+                <label for="new-drugs">Notify about New Drugs:</label>
+                <input type="checkbox" id="new-drugs">
+            </div>
+        </div>
+
+        <!-- Prescription Notifications -->
+        <button class="collapsible">Prescription Notifications 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content preshown">
+            <div class="setting-item">
+                <label for="prescription-expiry">Notify on Prescription Expiry:</label>
+                <input type="checkbox" id="prescription-expiry" checked>
+            </div>
+            <div class="setting-item">
+                <label for="refill-reminders">Receive Refill Reminders:</label>
+                <input type="checkbox" id="refill-reminders">
+            </div>
+        </div>
+
+        <!-- Drug Authentication Settings -->
+        <button class="collapsible">Drug Authentication 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content">
+            <div class="setting-item">
+                <label for="authentic-drugs">Enable Authentication for Purchased Drugs:</label>
+                <input type="checkbox" id="authentic-drugs" checked>
+            </div>
+            <div class="setting-item">
+                <label for="notify-counterfeits">Notify if Counterfeit Drugs Detected:</label>
+                <input type="checkbox" id="notify-counterfeits">
+            </div>
+        </div>
+
+        <!-- Drug Expiry Reminder -->
+        <button class="collapsible">Drug Expiry Reminders 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content">
+            <div class="setting-item">
+                <label for="expiry-alerts">Enable Expiry Date Alerts:</label>
+                <input type="checkbox" id="expiry-alerts">
+            </div>
+            <div class="setting-item">
+                <label for="drug-disposal">Get Drug Disposal Recommendations:</label>
+                <input type="checkbox" id="drug-disposal" checked>
+            </div>
+        </div>
+
+        <!-- Functionality Settings -->
+        <button class="collapsible">Functionality Settings 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content">
+            <div class="setting-item">
+                <label for="enable-notifications">Enable Notifications:</label>
+                <input type="checkbox" id="enable-notifications" checked>
+            </div>
+            <div class="setting-item">
+                <label for="data-sharing">Data Sharing Preferences:</label>
+                <select id="data-sharing" class="dropdown">
+                    <option value="none" selected>No Sharing</option>
+                    <option value="anonymized">Anonymized Sharing</option>
+                    <option value="full">Full Data Sharing</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="usage-tracking">Enable Usage Tracking:</label>
+                <input type="checkbox" id="usage-tracking">
+            </div>
+        </div>
+
+        <!-- Language Settings -->
+        <button class="collapsible">Language Preferences 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16.5l6-6-1.41-1.42L12 13.67l-4.59-4.59L6 10.5l6 6z"></path>
+            </svg>
+        </button>
+        <div class="content">
+            <div class="setting-item">
+                <label for="language-select">Preferred Language:</label>
+                <select id="language-select" class="dropdown">
+                    <option value="en" selected>English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Navigation bar ends here -->
+    <!-- Container which contains all the details in the consumer page including the side panel, but it does not contain the navbar and footer -->
+    <div class="mainGrid" id="mainGrid">
+      <!-- this main div is the container that display information about a drugs and contains the form which allows users to search, report, comment on a drug -->
+
+
+
+
+
+
+
+
+
+
+      <div class="main" id="main">
+
+
+        
+
+
+
+
+        <div class="PackageInfo" id="PackageInfo">
+
+
+          <div class="PackageCancel">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle packageCancel" id="packageCancel" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg>
+          </div>
+
+       
+          <div class="packageProfile" id="packageProfile">
+
+           
+            <!-- <div class="profileHead">
+              <div class="profilePic"></div>
+              <div class="profileDescription">
+                <p class="productName">Amazon</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam perferendis suscipit quia quae magni dicta adipisci quibusdam veniam! Molestiae, veniam.</p>
+              </div>
+            </div>
+
+
+
+             
+<div class="profileContent">
+
+
+  <div class="packageCards">
+    <div class="Cards">
+      <div class="cardNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star starSvg" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+        </svg>
+        <p>20k</p>
+      </div>
+      <div class="cardText">
+        <p>no of star</p>
+      </div>
+    </div>
+
+
+
+    <div class="Cards">
+      <div class="cardNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle reportSvg" viewBox="0 0 16 16">
+          <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+          <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+        </svg>
+        <p>0</p>
+      </div>
+      <div class="cardText">
+        <p>reports</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="Cards">
+      <div class="cardNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye viewSvg" viewBox="0 0 16 16">
+          <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+          <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+        </svg>
+        <p>60k</p>
+      </div>
+      <div class="cardText">
+        <p>views</p>
+      </div>
+    </div>
+ 
+  </div>
+
+<div class="reportStatus">
+<p class="GraphSubText">status</p>
+<div class="statusGraph likeGraph"></div>
+
+
+</div>
+
+
+
+  <p class="moreDetailText">more details</p>
+  <div class="packageDetails">
+    <div class="details"><p class="detailSubText">manufacturer name</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">manufacturer email</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">active ingredient</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">dosage</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">dosageform</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">dosage instruction</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">contraindiction</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">warning</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">side effects</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">interactions</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">storage</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">Handling</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">Preganancy</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+    <div class="details"><p class="detailSubText">lactation</p> <p class="detailText">Lorem ipsum dolor sit amet  cum dicta esse cumque!</p></div>
+  </div>
+</div>
+            -->
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="AuthenticateDrugs" id="AuthenticateDrugs">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="ConsumerCarosel">
+            <div class="container">
+              <div class="carousel">
+                  
+                  <a class="carousel-item" href="#one!">
+                      <div class="ConsumerCaroselCnt">
+                         
+
+                        <img src="/Assets/Images/phone scanning barcode.jpg" alt="">
+
+
+                      </div>
+                  </a>
+                 
+                  <a class="carousel-item" href="#two!">
+                      <div class="ConsumerCaroselCnt">
+                         
+                        <img src="/Assets/Images/cyber-security-illustration-concept-with-characters-data-security-protected-access-control-privacy-data-protection_269730-48.jpg" alt="">
+
+
+
+
+                      </div>
+                  </a>
+                  <a class="carousel-item" href="#three!">
+                      <div class="ConsumerCaroselCnt">
+
+
+                        <img src="/Assets/Images/warnings.jpg" alt="">
+
+
+
+                      </div>
+                  </a>
+                  
+              </div>
+      
+              <!-- Custom carousel arrows -->
+              <div class="carousel-arrows">
+                  <!-- SVG Arrow Left -->
+                  <button class="arrow-left" id="prevBtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                      </svg>
+                  </button>
+      
+                  <!-- SVG Arrow Right -->
+                  <button class="arrow-right" id="nextBtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                  </button>
+              </div>
+          </div>
+          </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="AutheticateOptions"> 
+            <p class="ScanOpt">authentication option</p>
+             </div>
+
+
+
+<video id="cameraStream" autoplay playsinline style="width: 100%; max-height: 600px; display: none;"></video> 
+
+
+<div id="drugCheckerContainer">
+
+  <div id="drugFormContainer" class="drugCheckerHidden">
+      <input type="text" id="drugInput" class="drugCheckerInput" placeholder="Enter drug name">
+      <button id="enterDrugBtn" class="drugCheckerButton">Enter</button>
+      <div id="loadingMessage" class="drugCheckerHidden">Checking...</div>
+      <div id="drugResultDiv" class="drugCheckerHidden"></div>
+  </div>
+</div>
+
+
+
+<div id="batchCheckerContainer">
+ 
+  <div id="batchFormContainer" class="drugCheckerHidden">
+      <input type="text" id="batchInput" class="drugCheckerInput" placeholder="Enter batch number">
+      <button id="enterBatchBtn" class="drugCheckerButton">Enter</button>
+      <div id="loadingMessage" class="drugCheckerHidden">Checking...</div>
+      <div id="batchResultDiv" class="drugCheckerHidden"></div>
+  </div>
+</div>
+
+
+
+
+             <div class="options">
+
+              <div class="option option1" id="showDrugFormBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-body-text" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5m0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <p class="optionHeadText">Name</p>
+                <p class="optionText">input the name of the drug</p>
+                
+              </div>
+
+
+              <div class="option option2 drugCheckerButton" id="openCameraBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+                  <path d="M2 2h2v2H2z"/>
+                  <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"/>
+                  <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"/>
+                  <path d="M10 0v6h6V0zm5 1v4h-4V1zM8 1V0h1v2H8v2H7V1zm0 5V4h1v2zM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8zm0 0v1H2V8H1v1H0V7h3v1zm10 1h-1V7h1zm-1 0h-1v2h2v-1h-1zm-4 0h2v1h-1v1h-1zm2 3v-1h-1v1h-1v1H9v1h3v-2zm0 0h3v1h-2v1h-1zm-4-1v1h1v-2H7v1z"/>
+                  <path d="M7 12h1v3h4v1H7zm9 2v2h-3v-1h2v-1z"/>
+                </svg>
+                <p class="optionHeadText">Barcode</p>
+                <p class="optionText">scan barcode on the drug package</p>
+                
+              </div>
+
+
+
+              <div class="option option3" id="showBatchFormBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"/>
+                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+              </svg>
+                <p class="optionHeadText">Batch Number</p>
+                <p class="optionText">batch number authentication</p>
+                
+              </div>
+
+
+
+
+<!-- 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-body-text" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5m0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+              </svg>
+
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"/>
+                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+              </svg> -->
+
+
+
+
+
+             </div>
+
+             <h2 class="prevViewedPkgs">Previously Viewed Packages</h2>
+             <div class="table-container">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Package Name</th>
+                          <th>Package ID</th>
+                          <th>Manufacturer</th>
+                          <th>Date Viewed</th>
+                          <th>Expiry Date</th>
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Paracetamol</td>
+                          <td>PKG001</td>
+                          <td>Emzor</td>
+                          <td>2024-09-15</td>
+                          <td>2025-12-31</td>
+                          <td>Valid</td>
+                      </tr>
+                      <tr>
+                          <td>Ibuprofen</td>
+                          <td>PKG002</td>
+                          <td>Orange Drugs</td>
+                          <td>2024-09-16</td>
+                          <td>2024-12-01</td>
+                          <td>Valid</td>
+                      </tr>
+                      <tr>
+                          <td>Metformin</td>
+                          <td>PKG003</td>
+                          <td>Biogaran</td>
+                          <td>2024-09-18</td>
+                          <td>2023-10-30</td>
+                          <td>Expired</td>
+                      </tr>
+                     
+                  </tbody>
+              </table>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- main container ends here -->
+      
+      <!-- Consumer_dashboard contains list of drug packages and the package picture -->
+       
+      <div class="Consumer_DashBoard" id="ConsumerDashBoard">
+        <!-- this simply holds the search and filter dropdown in the side panel of the consumer page -->
+       
+        <div class="consumer_sidePanelNav" id="consumer_sidePanelNav">
+            
+        <select name="" id="">
+          <option value="">MOST VIEWED</option>
+          <option value="">MOST VIEWED</option>
+        </select>
+        
+          
+        <div class="SideSearchCnt">
+          <input type="text" placeholder="search" id="SideSearchDrugsInput">
+        
+            <svg
+              
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+               
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+
+              
+        
+        </div>
+        </div>
+        <!-- consumer_sidePanelNav end here -->
+        <!-- consumer packages list start here -->
+         <div class="Packages" id="Packages">
+          <!-- <div class="More_Drugs_Hidden_Details">
+            <p class="DrugDescription">${Packages_Items[Drugs].DrugDescription}</p>
+            <p class="ActiveIngredient">${Packages_Items[Drugs].ActiveIngredient}</p>
+            <p class="DosageForm">${Packages_Items[Drugs].DosageForm}</p>
+            <p class="DosageInstruction">${Packages_Items[Drugs].DosageInstruction}</p>
+            <p class="Contraindictions">${Packages_Items[Drugs].Contraindictions}</p>
+            <p class="Warnings">${Packages_Items[Drugs].Warnings}</p>
+            <p class="SideEffects">${Packages_Items[Drugs].SideEffects}</p>
+            <p class="interactions">${Packages_Items[Drugs].interactions}</p>
+            <p class="Storage">${Packages_Items[Drugs].Storage}</p>
+            <p class="Handling">${Packages_Items[Drugs].Handling}</p>
+            <p class="Preganancy">${Packages_Items[Drugs].Preganancy}</p>
+            <p class="Lactation">${Packages_Items[Drugs].Lactation}</p>
+            <p class="ExpiringDate">${Packages_Items[Drugs].ExpiringDate}</p>
+            <p class="ManufacturerName">${Packages_Items[Drugs].ManufacturerName}</p>
+            <p class="ManufacturingDate">${Packages_Items[Drugs].ManufacturingDate}</p>
+            <p class="CompanyName">${Packages_Items[Drugs].CompanyName}</p>
+            <p class="CompanyEmail">${Packages_Items[Drugs].CompanyEmail}</p>
+          </div> -->
+         </div>
+      </div>
+      <!-- Consumer_DashBoard end here -->
+    </div>
+    <!-- Main_grid ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+      <p>&copy; Copyright 2024, All right reserved.</p>
+    </footer>
+    <!-- footer ends here -->
+
+    <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
+
+
+    <script defer src="./Consumer.js" defer></script>
+    
+  </body>
+</html>
+
+
+
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+  <path d="M2 2h2v2H2z"/>
+  <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"/>
+  <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"/>
+  <path d="M10 0v6h6V0zm5 1v4h-4V1zM8 1V0h1v2H8v2H7V1zm0 5V4h1v2zM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8zm0 0v1H2V8H1v1H0V7h3v1zm10 1h-1V7h1zm-1 0h-1v2h2v-1h-1zm-4 0h2v1h-1v1h-1zm2 3v-1h-1v1h-1v1H9v1h3v-2zm0 0h3v1h-2v1h-1zm-4-1v1h1v-2H7v1z"/>
+  <path d="M7 12h1v3h4v1H7zm9 2v2h-3v-1h2v-1z"/>
+</svg> -->
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-body-text" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5m0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+</svg> -->
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg> -->
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
+  <path d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429z"/>
+</svg> -->
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+  <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+</svg> -->
+
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+</svg> -->
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+  <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"/>
+  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+</svg> -->
+
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+</svg> -->
+
+
+<!-- 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+  <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2m0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14"/>
+</svg> -->
+
+
+
+

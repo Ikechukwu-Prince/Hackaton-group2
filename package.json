@@ -1,0 +1,17 @@
+{
+  "name": "team-tenacity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}

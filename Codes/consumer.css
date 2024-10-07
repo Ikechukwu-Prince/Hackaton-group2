@@ -1,0 +1,1281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+body{
+  overflow-x: hidden;
+}
+.nav {
+  /* background-color: rgb(167, 167, 167); */
+  background-color: rgb(35, 59, 112);
+  /* border-bottom: 2px solid rgb(70, 68, 85); */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav .navLinks {
+  display: flex;
+  gap: 15px;
+}
+.navLinks a{
+text-decoration: none;
+color: white;
+font-size: small;
+text-transform: uppercase;
+font-family: Arial;
+}
+.nav .mobileNavSvgPkg {
+  display: flex;
+  gap: 50px;
+}
+.mobileNavSvgPkg svg {
+  width: 25px;
+  height: 25px;
+ color: white;
+ display: none;
+ cursor: pointer;
+}
+.navMobile {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: absolute;
+  background-color: white;
+  display: none;
+}
+.navMobile ul {
+width: 100%;
+height: 100%;
+background-color: rgb(255, 255, 255);
+display: flex;
+align-items: start;
+justify-content: center;
+flex-direction: column;
+row-gap: 20px;
+padding-left: 10px !important;
+text-transform: uppercase;
+
+}
+
+@media (width >= 768px) {
+  .navMobile {
+    display: none !important;
+  }
+}
+
+
+
+.linkMenuToggle {
+  display: block;
+  position: absolute ;
+  z-index: 100;
+}
+
+@media (width <= 768px) {
+  .nav .navLinks {
+    display: none;
+  }
+  .nav svg {
+    display: block;
+  }
+}
+
+.settingSection {
+  display: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  display: none;
+}
+
+.settingToggle {
+  display: block;
+}
+.settings-container {
+  max-width: 100%;
+  
+  margin: 0 auto; /* Center the container */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); Add a shadow for depth */
+  /* background-color: #1f1f1f; Dark background for settings */
+  padding: 20px;
+}
+
+.setting-section {
+  margin-bottom: 20px;
+}
+
+.setting-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.setting-item:last-child {
+  border-bottom: none; /* Remove the last item’s border */
+}
+
+.setting-item label {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.setting-item input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Collapsible settings */
+.collapsible {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible svg {
+  fill: #ddd; /* SVG icon color */
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.collapsible.active svg {
+  transform: rotate(180deg); /* Rotate icon when active */
+}
+
+.collapsible:hover {
+  background-color: #333; /* Highlight on hover */
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #333; /* Content background */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.content.preshown {
+  max-height: 500px; /* Initially open some sections */
+  border: 1px solid rgb(39, 50, 68);
+}
+
+.content p {
+  padding: 10px 0;
+  margin: 0;
+  border-bottom: 1px solid #444;
+}
+
+.content p:last-child {
+  border-bottom: none; /* Remove last border */
+}
+
+.content label {
+  color: #ddd;
+  font-size: 15px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown option {
+  background-color: #1f1f1f;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .setting-item label {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .settings-container {
+      padding: 15px;
+  }
+
+  .setting-item label {
+      font-size: 13px;
+  }
+
+  .setting-item input[type="checkbox"] {
+      transform: scale(1.1); /* Slightly smaller checkboxes for mobile */
+  }
+}
+
+
+.mainGrid {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: rgb(238, 238, 238); */
+  /* background-color: rgb(22, 24, 27);   */
+  background-color: rgb(9, 25, 48);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "main main dashBoard"
+    "main main dashBoard"
+    "main main dashBoard";
+  gap: 0.5rem; */
+  padding: 0px 5px 0px 5px;
+}
+
+
+.mainGridToggle {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+.mainGrid .main {
+  /* grid-area: main; */
+  
+  width: 65%;
+  height: 99vh;
+
+   /* background-color: white;  */
+   /* overflow-y: auto; 
+  padding-bottom: 100px;  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main .PackageInfo{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 2, 20);
+  display: none;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+.PackageInfo .PackageCancel {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PackageCancel svg {
+  /* border: 1px solid rgb(255, 255, 255); */
+  /* padding: 5px; */
+  width: 20px;
+  height: 20px;
+  transform: scale(2);
+  border-radius: 50%;
+  margin-bottom: 40px;
+  color: white;
+  
+}
+.PackageInfo .packageProfile {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  /* background-color: rgb(170, 170, 170); */
+  padding: 0px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+.packageProfile .profileHead {
+  width: 100%;
+  height: auto;
+  background-color: rgb(17, 33, 60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 20px;
+  gap: 20px;
+  /* border-radius: 20px; */
+}
+.profileHead .profilePic {
+  width: 20%;
+  min-width: 150px;
+  height: 150px;
+  background-color: rgb(44, 69, 100);
+}
+.profilePic img {
+  width: 100%;
+  height: 100%  ;
+}
+.profileHead .profileDescription {
+  width: 100%;
+  height: auto;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.profileDescription .productName {
+  color: white;
+  font-size: x-large;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.profileDescription .description {
+  color: rgb(199, 199, 199);
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+.packageProfile .profileContent {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-color: rgb(17, 32, 53);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-left: 15px;
+}
+
+.packageCards {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  /* background-color: white; */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.packageCards .Cards {
+  width: 250px;
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid rgb(26, 56, 112);
+  background-color: rgb(28, 50, 77);
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.Cards .cardNav {
+  width: 100%;
+  height: 40px;
+  /* background-color: rgb(61, 129, 150); */
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardNav svg {
+  font-size: x-large;
+  width: 30px;
+  height: 30px;
+}
+.cardNav .starSvg {
+  color: gold;
+}
+.cardNav .reportSvg {
+  color: rgb(247, 127, 127);
+}
+.cardNav .viewSvg {
+  color: rgb(95, 211, 95);
+}
+.cardNav p {
+  color: white;
+  font-size: x-large;
+}
+.Cards .cardText {
+  width: 100%;
+  height: 40px;
+  /* background-color: rgb(150, 61, 61); */
+  display: flex;
+  align-items: end;
+  padding: 0px 10px;
+}
+.cardText p {
+  color: white;
+  font-size: small;
+  text-transform: uppercase;
+
+}
+@media (width <= 544px) {
+  .packageCards {
+    justify-content: center;
+  }
+  .packageCards .Cards {
+    width: 100%;
+  }
+}
+@media (width <= 840px) {
+  .packageCards {
+    justify-content: center;
+  }
+  .packageCards .Cards {
+    width: 100%;
+  }
+}
+@media (width <= 768px) {
+  .packageCards {
+    justify-content: space-between;
+  }
+  .packageCards .Cards {
+    width: 200px;
+  }
+}
+@media (width <= 449px) {
+  .packageCards {
+    justify-content: center;
+  }
+  .packageCards .Cards {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+
+
+
+
+.packageProfile .reportStatus {
+  width: 100%;
+  height: auto;
+  /* background-color: white; */
+}
+.reportStatus .GraphSubText {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px
+}
+.reportStatus .statusGraph {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(14, 20, 32);
+  margin-bottom: 50px;
+  background: url(/Assets//Images/chart4.png)no-repeat center center;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.profileContent .moreDetailText {
+  color: white;
+  font-size: medium;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.profileContent  .packageDetails {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  /* background-color: white; */
+}
+.packageDetails .details {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(20, 47, 59);
+  padding-top: 10px;
+  padding-left: 10px;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid navy;
+  /* border-bottom: 1px solid navy; */
+}
+.details .detailSubText{
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  width: 40%;
+}
+.details .detailText{
+  color: white;
+  font-size: medium;
+  width: 60%;
+  /* background-color: rgb(12, 34, 58); */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-radius: 20px;
+}
+/* .................................... */
+.comment-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1b283f; /* Dark background for comment section */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-family: Arial, sans-serif;
+  color: #ffffff; /* White text */
+}
+
+.comment-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #39455f;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  resize: none; /* Prevent resizing */
+}
+
+.comment-submit {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-submit:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.success-message {
+  display: none;
+  margin-top: 10px;
+  color: #28a745; /* Green color for success message */
+  text-align: center;
+}
+
+.error-message {
+  display: none;
+  margin-top: 10px;
+  color: #dc3545; /* Red color for error message */
+  text-align: center;
+}
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: #28a745; /* Green color for success icon */
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.error-icon {
+  width: 24px;
+  height: 24px;
+  fill: #dc3545; /* Red color for error icon */
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .comment-input, .comment-submit {
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .AuthenticateDrugs {
+  width: 100%;
+  height: 100vh;
+  /* background-color: white; */
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.AuthenticateDrugs .ConsumerCarosel{
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.ConsumerCarosel .carousel {
+  height: 250px;
+  width: 100% !important;
+  
+   
+}
+
+.carousel-item {
+    min-height: 200px !important;
+    width: 290px !important;
+    background-color: #286196;
+    border-radius: 10px;
+    /* padding: 10px; */
+    border:  1px solid rgb(26, 81, 95);
+    text-align: center;
+    /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+    overflow-y: hidden;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+@media (width <= 768px) {
+  .carousel-item {
+    width: 100%;
+  }
+}
+
+
+/* Style for the larger center item */
+.carousel-item.active {
+    transform: scale(1.2);
+}
+
+/* Custom arrows */
+.carousel-arrows {
+    position: relative; 
+    top: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    
+    transform: translateY(-300%);
+}
+
+.arrow-left, .arrow-right {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-left svg, .arrow-right svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        height: 300px !important;
+    }
+
+    .arrow-left, .arrow-right {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-item {
+        height: 220px;
+        padding: 10px;
+    }
+
+    .carousel-item.active {
+        transform: scale(1.1);
+    }
+
+    .arrow-left, .arrow-right {
+        padding: 8px;
+    }
+
+    .arrow-left svg, .arrow-right svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#drugCheckerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.drugCheckerInput {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.drugCheckerButton {
+  padding: 10px 15px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.drugCheckerButton:hover {
+  background-color: #0056b3; /* Lighter blue on hover */
+}
+
+.drugCheckerResultBox {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  background-color: rgb(16, 30, 46); /* White background for the result box */
+  color: rgb(255, 255, 255);
+  width: 300px; /* Fixed width for consistency */
+}
+
+#drugResultDiv {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: darkblue;
+}
+
+.drugCheckerHidden {
+  display: none; /* Initially hidden */
+}
+
+.drugCheckerError {
+  color: red;
+}
+
+#loadingMessage {
+  margin-top: 10px;
+  color: rgb(21, 255, 0);
+  font-style: italic;
+}
+
+
+
+
+
+
+#batchCheckerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.drugCheckerInput {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.drugCheckerButton {
+  padding: 10px 15px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.drugCheckerButton:hover {
+  background-color: #0056b3; /* Lighter blue on hover */
+}
+
+.drugCheckerResultBox {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  background-color: white; /* White background for the result box */
+  color: darkblue;
+  width: 300px; /* Fixed width for consistency */
+}
+
+#batchResultDiv {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: darkblue;
+}
+
+.drugCheckerHidden {
+  display: none; /* Initially hidden */
+}
+
+.drugCheckerError {
+  color: red;
+}
+
+#loadingMessage {
+  margin-top: 10px;
+  color: darkblue;
+  font-style: italic;
+}
+
+
+
+
+.AutheticateOptions .ScanOpt {
+  color: white;
+  font-size: large;
+text-align: center;
+  text-transform: uppercase;
+
+  word-spacing: 3px;
+}
+
+
+
+.AuthenticateDrugs .options{
+  width: 100%;
+  height: 200px;
+  /* background-color: white; */
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.options .option {
+  background-color: rgb(9, 27, 51);
+  border: 1px solid rgb(13, 37, 68);
+  width: 30%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  transition: 0.2s;
+}
+.options .option:hover {
+  background-color: rgb(11, 32, 59);
+}
+.option svg {
+  width: 70px;
+  height: 70px;
+  color: rgb(214, 214, 214);
+}
+.option .optionHeadText {
+  color: white;
+  text-align: center;
+  font-size: medium;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.option .optionText {
+  color: rgb(194, 194, 194);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (width <= 768px) {
+  .options .option {
+    min-width: 35%;
+    height: 150px;
+  }
+  .option svg {
+    width: 70px;
+    height: 40px;
+    color: rgb(214, 214, 214);
+  }
+}
+
+
+.prevViewedPkgs {
+  margin-top: 50px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: large;
+  text-transform: uppercase;
+}
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+  margin-top: 20px;
+  /* background-color: navy; */
+  color: white;
+}
+
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapsed borders */
+  margin: 0; /* No margin for the table */
+  table-layout: auto; /* Automatic column widths */
+}
+
+th, td {
+  padding: 12px; /* Cell padding */
+  text-align: left; /* Left align text */
+  border: 1px solid #444; /* Dark borders */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+th {
+  background-color: #162344; /* Dark header background */
+  font-weight: bold; /* Bold text for header */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  th, td {
+      padding: 10px; /* Adjust padding on smaller screens */
+      font-size: 14px; /* Smaller font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  th, td {
+      font-size: 12px; /* Even smaller font size for mobile */
+      padding: 8px; /* Less padding */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainGrid .Consumer_DashBoard {
+  width: 35%;
+  height: 99vh;
+  /* background-color: rgb(15, 15, 17); */
+  background-color: rgb(12, 25, 65);
+  border: 1px solid rgb(19, 37, 99);
+  grid-area: dashBoard;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav {
+  width: 100%;
+  height: 50px;
+  /* background-color: wheat; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 8px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+
+}
+
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav select {
+ 
+  background-color: transparent;
+  width: auto;
+  outline: 0;
+  border: 0 !important;
+  background-image: none;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  /* color: black; */
+}
+
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt{
+  height: 20px;
+  background: #fff;
+  padding: 14px 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px 0 rgb(0, 0, 0.3);
+
+}
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt  input{
+  width: 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  
+}
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt  svg{
+transform: scale(0.9);
+}
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt:hover  svg{
+ color: rgb(0, 0, 0);
+ transform: scale(1.1);
+ transition: .6s;
+}
+.mainGrid .Consumer_DashBoard .consumer_sidePanelNav .SideSearchCnt:hover  input{
+  width: 200px;
+  transition: 0.8s;
+}
+
+
+
+@media (width <= 768px) {
+  .mainGrid {
+    flex-direction: column-reverse;
+  }
+  .mainGrid .main {
+    width: 100%;
+  }
+  .mainGrid .Consumer_DashBoard {
+    display: none;
+  }
+
+}
+
+
+
+
+
+.Packages{
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: white; */
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.pkg {
+  margin-bottom: 25px;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(14, 28, 71);
+  /* border: 0.5px solid rgb(19, 37, 99); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+.pkg:hover {
+  background-color: rgb(10, 39, 83);
+}
+.pkg .drugsStart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.pkg .drugsStart .DrugName_sub_Cnt {
+  pointer-events: none;
+}
+
+.pkg .drugsStart img{
+  /* aspect-ratio: 16/9; */
+  width: 50px;
+  height: 50px;
+  background-color: rgb(27, 72, 131);
+  border-radius: 50px;
+}
+.pkg .drugsStart .DrugName_sub_Cnt .DashBoard_DrugName {
+  color: rgb(255, 255, 255);
+  font-size: medium;
+}
+.pkg .DashBoard_DrugDate {
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+.pkg .drugsStart .DrugName_sub_Cnt .subCompanyName {
+  color: rgb(168, 168, 168);
+  font-size: smaller;
+}
+.hide {
+  display: none;
+}
+.More_Drugs_Hidden_Details{
+  display: none;
+}
+@media (width <= 768px) {
+  
+
+.dashBoardToggle{
+  display: block !important;
+  position: absolute !important;
+  width: 80% !important;
+  right: 0;
+}
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(35, 59, 112);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: white;
+}
+.footerToggle {
+  display: none;
+}
+
+/* 08171070172 cosi */

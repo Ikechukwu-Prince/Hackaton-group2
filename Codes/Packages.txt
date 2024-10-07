@@ -1,0 +1,25 @@
+const Packages_Items = {
+    Amazon: {
+      DrugName: "Amazon",
+      Description: "This is a Drugs",
+      ActiveIngredient: "salt",
+      Dosage: "Morning and Evening",
+      DosageForm: "eg, tablet, capsule, liquid",
+      DosageInstruction: "",
+      Contraindictions: "conditions or situations where the drugs should not be used",
+      Warnings: "Important safety information",
+      SideEffects: "",
+      interactions: "potential interactions with other drugs or substance",
+      Storage: "",
+      Handling: "",
+      Preganancy: "safety information for use during pregnancy",
+      Lactation: "safety information for use during breastfeeding",
+      ExpiringDate: '12 / 12 / 2024',
+      ManufacturerName: "",
+      ManufacturingDate:' 12 / 6 / 2009',
+      CompanyName: 'Redox',
+      CompanyEmail: "companyDrugs@gmail.com",
+      
+    },
+    
+  };
