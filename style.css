@@ -170,7 +170,7 @@ padding-right: 10px;
 .heroSearch input {
   width: 90%;
   min-width: 210px;
-
+background-color: transparent;
   height: 40px;
   border: none !important;
   outline: none !important;
