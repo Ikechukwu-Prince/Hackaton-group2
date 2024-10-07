@@ -6,6 +6,7 @@
 }
 html {
   scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
   overflow-x: hidden !important;
@@ -518,7 +519,9 @@ padding-right: 20px;
 
 
 @media (width <= 768px) {
-  
+  .coreFeaturesSection {
+    padding-top:50px;
+  }
   .coreFeatureIntro .featureIntroPkg {
     flex-direction: column-reverse;
     align-items: start;
@@ -739,7 +742,9 @@ padding-right: 20px;
 }
 .cardText h5 {
   color: rgb(32, 62, 95);
-  font-size: x-large;
+  font-size: larger;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-weight: 1000;
   font-family: arial;
   text-align: center;
@@ -751,12 +756,14 @@ padding-right: 20px;
   margin-bottom: 35px;
 }
 .cardText a {
-background-color: rgb(8, 20, 54);
-color: white;
+background-color: rgba(49, 40, 173, 0.753);
+color: rgb(255, 255, 255);
 padding: 6px 20px;
-border-radius: 20px;
-}
-@media (width <= 768px) {
+/* border-radius: 20px; */
+text-transform: uppercase;
+text-decoration: none;
+text-align: center;
+}@media (width <= 768px) {
   .Services {
     background: rgb(227, 240, 252);
   }
