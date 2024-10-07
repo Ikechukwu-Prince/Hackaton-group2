@@ -938,7 +938,7 @@ align-items: center;
       .carousel-item {
           min-height: 300px !important;
           width: 250px !important;
-          background-color: #ffffff;
+          background-color: #031942;
           border-radius: 10px;
           padding: 10px;
          
@@ -957,12 +957,13 @@ align-items: center;
       .carousel-item p {
           font-size: 1.1em;
           line-height: 1.5;
-          color: rgb(0, 1, 87);
+          color: rgb(198, 198, 233);
+          font-family: 'cursive';
           /* font-weight: bold; */
       }
 
       .carousel-item h5 {
-          color: #000000;
+          color: #ffffff;
       }
 
       /* Style for the larger center item */
