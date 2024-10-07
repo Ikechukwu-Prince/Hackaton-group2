@@ -56,13 +56,13 @@ __Public_Folder:
 
 
 
-## Usage
-# For Manufacturers:
+# Usage
+## For Manufacturers:
 
 Go to the "Manufacturer" section and register your drugs by providing all necessary details such as drug name, batch number, and verification code.
 Manage your registered drugs and view consumer authentication reports.
 
-##For Consumers:
+## For Consumers:
 
 Enter the drug verification code found on your purchased drug into the "Authenticate Drug" section.
 Receive instant feedback on the legitimacy of the drug.
@@ -70,7 +70,7 @@ Register for a profile to track your authentication history.
 
 
 
-## Contributing
+# Contributing
 We welcome contributions from the community to improve this platform. To contribute:
 1. Prince
 2. destiny
@@ -83,7 +83,7 @@ We welcome contributions from the community to improve this platform. To contrib
 9. petra
 
 
- ## Future Enhancements
+ # Future Enhancements
 API Integration: Future updates will integrate APIs from drug regulatory bodies for automated cross-checking of drug records.
 QR Code Authentication: Simplify drug authentication for consumers by integrating QR code scanning capabilities.
 Multi-language Support: Expanding language options for a global user base.
