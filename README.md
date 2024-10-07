@@ -57,12 +57,12 @@ __Public_Folder:
 
 
 # Usage
-## For Manufacturers:
+### For Manufacturers:
 
 Go to the "Manufacturer" section and register your drugs by providing all necessary details such as drug name, batch number, and verification code.
 Manage your registered drugs and view consumer authentication reports.
 
-## For Consumers:
+### For Consumers:
 
 Enter the drug verification code found on your purchased drug into the "Authenticate Drug" section.
 Receive instant feedback on the legitimacy of the drug.
