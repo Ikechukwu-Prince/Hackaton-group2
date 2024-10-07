@@ -76,7 +76,7 @@ We welcome contributions from the community to improve this platform. To contrib
 2. Destiny
 3. Bright
 4. Michelle
-5. Hakimat
+5. Hakeemat
 6. Habib
 7. Farida
 8. Chike
