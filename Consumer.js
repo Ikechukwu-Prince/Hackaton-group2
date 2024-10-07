@@ -54,7 +54,7 @@ function Packages() {
       Paracetamol: {
         DrugName: "Paracetamol",
         DrugDescription: "Used for pain relief and fever reduction.",
-        DrugImage: "/Assets/Images/paracetamol.jpg",
+        DrugImage: "./Assets/Images/paracetamol.jpg",
         ActiveIngredient: "Paracetamol",
         Dosage: "1-2 tablets every 4-6 hours",
         DosageForm: "Tablet",
@@ -79,7 +79,7 @@ function Packages() {
       Amoxicillin:{
         DrugName: "Amoxicillin",
         DrugDescription: "An antibiotic used to treat bacterial infections.",
-        DrugImage: "/Assets/Images/Amoxicillin.jpg",
+        DrugImage: "./Assets/Images/Amoxicillin.jpg",
         ActiveIngredient: "Amoxicillin",
         Dosage: "500 mg every 8 hours",
         DosageForm: "Capsule",
@@ -104,7 +104,7 @@ function Packages() {
       Ibuprofen :{
         DrugName: "Ibuprofen",
         DrugDescription: "Anti-inflammatory used for pain, swelling, and fever.",
-        DrugImage: "/Assets/Images/Ibuprofen.jpg",
+        DrugImage: "./Assets/Images/Ibuprofen.jpg",
         ActiveIngredient: "Ibuprofen",
         Dosage: "200-400 mg every 4-6 hours",
         DosageForm: "Tablet",
@@ -129,7 +129,7 @@ function Packages() {
       loratadine : {
         DrugName: "Loratadine",
         DrugDescription: "An antihistamine used for allergy relief.",
-        DrugImage: "/Assets/Images/loratadine.jpg",
+        DrugImage: "./Assets/Images/loratadine.jpg",
         ActiveIngredient: "Loratadine",
         Dosage: "10 mg once daily",
         DosageForm: "Tablet",
@@ -154,7 +154,7 @@ function Packages() {
       Amlodipine :{
         DrugName: "Amlodipine",
         DrugDescription: "Used to treat high blood pressure and chest pain.",
-        DrugImage: "/Assets/Images/Amlodipine.png",
+        DrugImage: "./Assets/Images/Amlodipine.png",
         ActiveIngredient: "Amlodipine",
         Dosage: "5-10 mg once daily",
         DosageForm: "Tablet",
@@ -179,7 +179,7 @@ function Packages() {
       Metformin: {
         DrugName: "Metformin",
         DrugDescription: "Used to control blood sugar levels in type 2 diabetes.",
-        DrugImage: "/Assets/Images/Metformin.jpg",
+        DrugImage: "./Assets/Images/Metformin.jpg",
         ActiveIngredient: "Metformin",
         Dosage: "500 mg twice daily",
         DosageForm: "Tablet",

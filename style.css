@@ -128,7 +128,7 @@ height: 20px;
   height: 100vh;
   display: flex;
   align-items: center;
-  background: rgba(12, 37, 90, 0.466) url(/Assets/Images/istockphoto-487654700-612x612.jpg) no-repeat center center;
+  background: rgba(12, 37, 90, 0.466) url(./Assets/Images/istockphoto-487654700-612x612.jpg) no-repeat center center;
   background-size: cover;
   backdrop-filter: saturation;
   background-blend-mode:darken;

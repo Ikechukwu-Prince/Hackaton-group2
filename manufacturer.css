@@ -441,12 +441,12 @@ border-radius: 10px;
   border-radius: 10px;
 }
 .publishedContent .content1 {
- background: var(--homeCarosel--) url(/Assets/Images/chart.png) no-repeat center center;
+ background: var(--homeCarosel--) url(./Assets/Images/chart.png) no-repeat center center;
  border: 1px solid var(--border2Color--);
  
 }
 .publishedContent .content2 {
- background: var(--homeCarosel--) url(/Assets/Images/Chart.png)no-repeat center center;
+ background: var(--homeCarosel--) url(./Assets/Images/Chart.png)no-repeat center center;
  border: 1px solid var(--border2Color--);
 }
 .publishedContent .content .contentNav {
